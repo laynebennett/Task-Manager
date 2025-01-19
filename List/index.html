@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Tracker</title>
+    
+    <style>
+        body {
+            font-family: "Segoe UI", Tahoma, sans-serif;
+            margin: 0;
+            padding: 1em;
+            width: 300px;
+        }
+        .task {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin-bottom: 0.5em;
+        }
+        .progress-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1em;
+        }
+        .progress-bar {
+            width: 50%;
+            height: 10px;
+            background-color: #f3f3f3;
+            border: 1px solid #ccc;
+            margin-left: 10px;
+            position: relative;
+        }
+        .progress {
+            height: 100%;
+            background-color: #4c90af;
+            transition: width 0.3s;
+        }
+        .increment-btn {
+            font-size: 10px; /* Make the text smaller for the +5 min button */
+            margin-left: 5px; /* Add space on the left side */
+            margin-right: 5px; /* Add space on the right side */
+            width: 60px;
+        }
+        .clear-task{
+            margin-left: auto;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Task Tracker</h1>
+
+    <!-- Unified Task List -->
+    <h2>Tasks</h2>
+    <div id="task-list"></div>
+
+    <!-- Add Task -->
+    
+    <input type="text" id="task-name" placeholder="Task name">
+    <button id="clear-all-btn">Clear All</button> 
+    <input type="number" id="task-total" placeholder="Total time (mins)" min="1">
+    <button id="add-task">Add Task</button>
+    
+
+    <script src="script.js"></script>
+
+</body>
+</html>
